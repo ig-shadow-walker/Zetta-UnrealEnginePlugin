@@ -71,7 +71,7 @@ namespace ZettaRequestBuildersImpl
 			return false;
 		}
 		FString Engine, PolygonType, Level;
-		if (!Pick(O, ZettaTool::Has(O, TEXT("engine")) ? TEXT("engine") : TEXT("model"), { TEXT("r1"), TEXT("n1") }, TEXT("r1"), Engine, OutError)) return false;
+		if (!Pick(O, ZettaTool::Has(O, TEXT("engine")) ? TEXT("engine") : TEXT("model"), { TEXT("r1") }, TEXT("r1"), Engine, OutError)) return false;
 		if (!Pick(O, TEXT("polygonType"), { TEXT("triangle"), TEXT("quadrilateral") }, TEXT("triangle"), PolygonType, OutError, &PolygonAlias)) return false;
 		const bool bQuads = PolygonType == TEXT("quadrilateral");
 		if (!Pick(O, ZettaTool::Has(O, TEXT("detail")) ? TEXT("detail") : TEXT("faceLevel"), { TEXT("low"), TEXT("medium"), TEXT("high") }, FString(), Level, OutError)) return false;

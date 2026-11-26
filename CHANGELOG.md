@@ -2,6 +2,9 @@
 
 ## 0.1.0 — first release (beta)
 
+A prebuilt release for **macOS** (Apple Silicon and Intel) on Unreal Engine 5.8. A prebuilt Windows build is coming
+soon; until then, Windows users can build it from source.
+
 - Sign in with your browser; the session is kept in your system's key store.
 - **3D Studio:** Generate 3D, Smart 3D, Segment, Retopology, Smart UV, Texture, Auto Rig (UE5 Mannequin skeleton
   first) and the Image Studio, with live prices and your plan's options.

@@ -7,7 +7,7 @@
 
 <p align="center">
   <a href="#install"><img alt="Unreal Engine 5.8" src="https://img.shields.io/badge/Unreal%20Engine-5.8-15130F?style=flat-square&logo=unrealengine&logoColor=FAF8F4"></a>
-  <a href="#install"><img alt="Windows · macOS · Linux" src="https://img.shields.io/badge/editor-Windows%20%C2%B7%20macOS%20%C2%B7%20Linux-15130F?style=flat-square"></a>
+  <a href="#install"><img alt="macOS · Windows coming soon" src="https://img.shields.io/badge/release-macOS%20%C2%B7%20Windows%20soon-15130F?style=flat-square"></a>
   <a href="#the-zetta-agent"><img alt="AI agent built in" src="https://img.shields.io/badge/AI%20agent-built%20in-1677FF?style=flat-square"></a>
   <a href="#license"><img alt="Apache-2.0" src="https://img.shields.io/badge/license-Apache--2.0-55514A?style=flat-square"></a>
 </p>
@@ -44,17 +44,25 @@ Everything you make is also in your library on zetta3d.ai, and everything you ma
 
 ## Install
 
-**You need:** Unreal Engine **5.8** on Windows, macOS or Linux, and a [Zetta 3D](https://zetta3d.ai) account.
+**You need:** Unreal Engine **5.8** and a [Zetta 3D](https://zetta3d.ai) account.
 
-**From a release (recommended — works in Blueprint-only projects).**
+| Platform | How to install |
+|---|---|
+| **macOS** (Apple Silicon and Intel) | The release zip below — prebuilt, works in Blueprint-only projects |
+| **Windows** | Prebuilt zip **coming soon**. Until then, install from source (below) with Visual Studio |
+| **Linux** | From source (below) |
 
-1. Download the zip for your engine version and platform from [Releases](../../releases).
+**From a release (macOS — recommended, works in Blueprint-only projects).**
+
+1. Download `Zetta3D-<version>-UE5.8-Mac.zip` from [Releases](../../releases).
 2. Unzip it into your project's `Plugins` folder, so you have `YourProject/Plugins/Zetta3D/Zetta3D.uplugin`.
    (To have it in every project, unzip it into the engine's `Engine/Plugins/Marketplace/` instead.)
 3. Open the project. The **Zetta 3D** window opens on its own.
 
-**From source (C++ projects).** Clone this repository into `YourProject/Plugins/Zetta3D` and open the project; Unreal
-offers to build the plugin. You need your engine's C++ toolchain (Visual Studio on Windows, Xcode on macOS).
+**From source (Windows and Linux today, or any C++ project).** Clone this repository into
+`YourProject/Plugins/Zetta3D` and open the project; Unreal offers to build the plugin. You need your engine's C++
+toolchain (Visual Studio on Windows, Xcode on macOS, clang on Linux) and a project with C++ in it — a Blueprint-only
+project can add C++ with **Tools › New C++ Class**.
 
 The plugin switches on the engine plugins it uses — Python Editor Script Plugin, Editor Scripting Utilities and
 Enhanced Input. GLB and FBX models import with the engine's own importers.
@@ -77,12 +85,12 @@ the level editor's toolbar, and dock it wherever you like. Each tab keeps its pl
 Every tool from the web Studio, docked in the editor — with live prices and your plan's options.
 
 <p align="center">
-  <img alt="3D Studio on Generate 3D: a prompt or a picture, the Zetta N1 and N2.5 engines, output and quality choices, and Import into the project / Place in the open level" src="Docs/images/studio.png" width="860">
+  <img alt="3D Studio on Generate 3D: a prompt or a picture, the Zetta N2.5 engine, output and quality choices, and Import into the project / Place in the open level" src="Docs/images/studio.png" width="860">
 </p>
 
 | Tool | What it does |
 |---|---|
-| **Generate 3D** | Text, a picture or several views → a 3D model, on Zetta N1 or N2.5, with every option the web Studio has |
+| **Generate 3D** | Text, a picture or several views → a 3D model, on Zetta N2.5, with every option the web Studio has |
 | **Smart 3D** | Clean, game-ready topology from the start, on Zetta Np1 or Np1.5 |
 | **Segment** | Split a model into named parts (or let Smart Segment decide them) |
 | **Retopology** | Rebuild a mesh at a polygon budget, as triangles or quads |

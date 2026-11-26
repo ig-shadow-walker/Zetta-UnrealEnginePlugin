@@ -14,7 +14,7 @@ class SZettaImageInput;
 class SZettaMultiViewInput;
 
 /**
- * Generate 3D (Zetta N1 / N2.5) and Smart 3D (Zetta Np1 / Np1.5): from a prompt, a picture or several views.
+ * Generate 3D (Zetta N2.5) and Smart 3D (Zetta Np1 / Np1.5): from a prompt, a picture or several views.
  * A prompt is drawn as a picture first when the model builds from pictures (and always with Control Mode,
  * which stops to show it before any 3D credits are spent).
  *

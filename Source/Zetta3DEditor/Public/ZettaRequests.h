@@ -17,7 +17,7 @@ struct ZETTA3DEDITOR_API FZettaGenerateOptions
 	/** Multi-view: (viewType, url) in submission order; front becomes the primary image server-side. */
 	TArray<TPair<FString, FString>> Views;
 
-	FString Model = TEXT("n1");
+	FString Model = TEXT("n25");
 	/** low-poly | high-res | ultra */
 	FString Quality = TEXT("high-res");
 	/** textured | geometry */

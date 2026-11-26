@@ -613,7 +613,7 @@ FString SZettaGenerateTool::QualityLock(const FString& Rung) const
 	const TOptional<int64> Max = GenMaxFaces();
 	if (Rung == TEXT("ultra") && Max.IsSet() && Max.GetValue() < 1000000) return TEXT("Ultra detail is available on paid plans.");
 	if (Rung == TEXT("low-poly") && GenGateNo(&FZettaEntitlements3D::AllowsLowPoly)) return TEXT("Low-poly generation is available on a paid plan.");
-	if (Rung == TEXT("low-poly") && !ZettaCatalog::Model(O.Model).bLowPoly) return TEXT("Low-poly generation needs Zetta N1.");
+	if (Rung == TEXT("low-poly") && !ZettaCatalog::Model(O.Model).bLowPoly) return TEXT("Low-poly generation needs Zetta N2.5.");
 	return FString();
 }
 

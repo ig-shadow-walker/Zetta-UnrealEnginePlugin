@@ -29,8 +29,8 @@ namespace ZettaToolSettings
 	const TArray<FZettaSettingOption>& RetopologyEngines()
 	{
 		static const TArray<FZettaSettingOption> L = {
-			{ TEXT("r1"), TEXT("Zetta R1"), TEXT("Up to 20,000 polygons. Faster, and less than half the price.") },
-			{ TEXT("n1"), TEXT("Zetta N1"), TEXT("No polygon ceiling — the option for a dense mesh.") },
+			// Zetta R1 alone: Zetta N1 was retired on 2026-11-18, as on zetta3d.ai.
+			{ TEXT("r1"), TEXT("Zetta R1"), TEXT("Up to 20,000 polygons, as triangles or quads.") },
 		};
 		return L;
 	}
@@ -461,7 +461,7 @@ namespace ZettaGenerateForm
 		F->SetBoolField(TEXT("imageFromPrompt"), false);
 		F->SetBoolField(TEXT("removeBackground"), true);
 		F->SetBoolField(TEXT("controlMode"), true);
-		F->SetStringField(TEXT("model"), TEXT("n1"));
+		F->SetStringField(TEXT("model"), TEXT("n25"));
 		F->SetStringField(TEXT("imageUrl"), TEXT(""));
 		F->SetStringField(TEXT("prompt"), TEXT(""));
 		F->SetStringField(TEXT("title"), TEXT(""));
@@ -749,7 +749,8 @@ namespace ZettaGenerateForm
 	TArray<FString> ModelsFor(const FString& Kind)
 	{
 		if (ZettaNodeCatalog::IsSmartGenerate(Kind)) return { TEXT("np1"), TEXT("np15") };
-		return { TEXT("n1"), TEXT("n25") };
+		// Zetta N1 was retired on 2026-11-18 (as on zetta3d.ai): never offered or sent; old library rows still name it.
+		return { TEXT("n25") };
 	}
 
 	FString ModelOf(const TSharedPtr<FJsonObject>& Form) { return JStr(Form, TEXT("model")); }

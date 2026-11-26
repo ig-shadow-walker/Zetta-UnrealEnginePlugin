@@ -33,7 +33,7 @@ namespace
 void SZettaGenerateTool::Construct(const FArguments& InArgs)
 {
 	bSmart = InArgs._Smart;
-	O.Model = bSmart ? TEXT("np1") : TEXT("n1");
+	O.Model = bSmart ? TEXT("np1") : TEXT("n25");
 	O.Quality = TEXT("high-res");
 	O.Output = TEXT("textured");
 	O.bPbr = true;
@@ -55,7 +55,7 @@ void SZettaGenerateTool::Construct(const FArguments& InArgs)
 			{
 				const FZettaEntitlements3D* G = FZettaStudioContext::Get().G3();
 				return bSmart && G && FZettaStudioContext::No(G->AllowsZettaNp1)
-					? LOCTEXT("SmartLocked", "Generate Smart 3D is available on a paid plan. Zetta N1 generates from text and images on every plan.")
+					? LOCTEXT("SmartLocked", "Generate Smart 3D is available on a paid plan.")
 					: FText();
 			}))
 		]

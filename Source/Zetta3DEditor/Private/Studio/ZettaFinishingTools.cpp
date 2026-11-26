@@ -153,7 +153,8 @@ TSharedRef<SWidget> SZettaRetopologyTool::BuildOptions()
 {
 	return FinishRows({
 		ZettaStudioUI::Field(LOCTEXT("Engine", "Engine"), ZettaStudioUI::Segmented([this]() { return Engine; }, [this](const FString& V) { Engine = V; Refresh(); },
-			{ { TEXT("r1"), LOCTEXT("ZettaR1", "Zetta R1"), FText() }, { TEXT("n1"), LOCTEXT("ZettaN1", "Zetta N1"), FText() } })),
+			// Zetta R1 alone: Zetta N1 was retired on 2026-11-18, as on zetta3d.ai.
+			{ { TEXT("r1"), LOCTEXT("ZettaR1", "Zetta R1"), FText() } })),
 		ZettaStudioUI::Hint(MakeAttributeLambda([this]()
 		{
 			return Engine == TEXT("r1")

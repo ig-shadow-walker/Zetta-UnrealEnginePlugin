@@ -197,7 +197,7 @@ namespace ZettaStudioImpl
 			OutError = TEXT("The prompt is longer than 1,024 characters.");
 			return false;
 		}
-		if (!PickChoice(In, TEXT("model"), { TEXT("n1"), TEXT("n25"), TEXT("np1"), TEXT("np15") }, TEXT("n1"), O.Model, OutError)) return false;
+		if (!PickChoice(In, TEXT("model"), { TEXT("n25"), TEXT("np1"), TEXT("np15") }, TEXT("n25"), O.Model, OutError)) return false;
 		if (!PickChoice(In, TEXT("quality"), { TEXT("low-poly"), TEXT("high-res"), TEXT("ultra") }, TEXT("high-res"), O.Quality, OutError)) return false;
 		if (!PickChoice(In, TEXT("output"), { TEXT("textured"), TEXT("geometry") }, TEXT("textured"), O.Output, OutError)) return false;
 		if (!PickChoice(In, TEXT("polygonType"), { TEXT("triangle"), TEXT("quadrilateral") }, TEXT("triangle"), O.PolygonType, OutError)) return false;

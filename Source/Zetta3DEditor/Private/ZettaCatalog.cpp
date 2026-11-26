@@ -51,7 +51,8 @@ namespace ZettaCatalog
 
 	const TArray<FString>& GenerateModels()
 	{
-		static const TArray<FString> L = { TEXT("n1"), TEXT("n25") };
+		// Zetta N1 was retired on 2026-11-18 (as on zetta3d.ai): never offered or sent; old library rows still name it.
+		static const TArray<FString> L = { TEXT("n25") };
 		return L;
 	}
 
