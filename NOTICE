@@ -1,0 +1,13 @@
+Zetta 3D for Unreal Engine
+Copyright 2026 Zetta 3D
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE.md).
+
+Trademarks. "Zetta 3D", "Zetta Agent", the Zetta model names (Zetta N1, N2.5, Np1, Np1.5, R1) and the Zetta 3D
+logo are trademarks of Zetta 3D. The license grants no right to use them (Apache License 2.0, section 6), except to
+describe where this software comes from. A fork must use its own name and logo.
+
+The Zetta 3D service. This plugin is a client for the Zetta 3D service at zetta3d.ai. Using that service is governed
+by the Zetta 3D Terms of Service and Privacy Policy, not by this license; the license covers this source code only.
+
+Unreal Engine is a trademark of Epic Games, Inc. This plugin is not made or endorsed by Epic Games.

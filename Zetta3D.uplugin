@@ -1,0 +1,53 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "0.1.0",
+	"FriendlyName": "Zetta 3D",
+	"Description": "Zetta 3D inside the Unreal Editor: generate 3D models and images, retopologize, texture and rig them, import them into your project, and build your game with the Zetta Agent.",
+	"Category": "Editor",
+	"CreatedBy": "Zetta 3D",
+	"CreatedByURL": "https://zetta3d.ai",
+	"DocsURL": "https://github.com/ig-shadow-walker/Zetta-UnrealEnginePlugin",
+	"MarketplaceURL": "",
+	"SupportURL": "https://github.com/ig-shadow-walker/Zetta-UnrealEnginePlugin/issues",
+	"CanContainContent": false,
+	"IsBetaVersion": true,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "Zetta3DEditor",
+			"Type": "Editor",
+			"LoadingPhase": "PostEngineInit",
+			"PlatformAllowList": [
+				"Win64",
+				"Mac",
+				"Linux"
+			]
+		},
+		{
+			"Name": "Zetta3DAgent",
+			"Type": "Editor",
+			"LoadingPhase": "PostEngineInit",
+			"PlatformAllowList": [
+				"Win64",
+				"Mac",
+				"Linux"
+			]
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "PythonScriptPlugin",
+			"Enabled": true
+		},
+		{
+			"Name": "EditorScriptingUtilities",
+			"Enabled": true
+		},
+		{
+			"Name": "EnhancedInput",
+			"Enabled": true
+		}
+	]
+}

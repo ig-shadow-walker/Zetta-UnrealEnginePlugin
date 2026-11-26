@@ -1,0 +1,14 @@
+# Build output
+Binaries/
+Intermediate/
+Saved/
+DerivedDataCache/
+dist/
+
+# OS / IDE
+.DS_Store
+.vs/
+.idea/
+.vscode/
+*.xcworkspace
+*.xcodeproj
